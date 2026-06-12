@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Добавить желание</h1>
+{% if errors %}
+    <div>{% for e in errors %}<p>{{ e }}</p>{% endfor %}</div>
+{% endif %}
+<form method="post">
+    <input name="name" placeholder="Название" required>
+    <input name="price" placeholder="Цена" required>
+    <input name="url" placeholder="Ссылка">
+    <select name="status">
+        <option>хочу</option>
+        <option>в пути</option>
+        <option>куплено</option>
+    </select>
+    <button>Сохранить</button>
+</form>
+{% endblock %}
