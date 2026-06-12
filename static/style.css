@@ -1,0 +1,7 @@
+body { font-family: sans-serif; background: #f0f2f5; margin: 0; padding: 20px; }
+nav { background: #667eea; padding: 10px; color: white; }
+nav a { color: white; margin-right: 20px; text-decoration: none; }
+main { max-width: 800px; margin: 20px auto; background: white; padding: 20px; border-radius: 10px; }
+button { background: #667eea; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; }
+input, select { padding: 5px; margin: 5px 0; width: 100%; }
+div { margin-bottom: 10px; }
