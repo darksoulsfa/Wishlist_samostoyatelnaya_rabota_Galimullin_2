@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Мои желания</h1>
+<p> Общая стоимость: <strong>{{ total }} ₽</strong></p>
+<form action="/search" method="get">
+    <input name="q" placeholder="Поиск...">
+    <button>Найти</button>
+</form>
+{% for w in wishes %}
+<div>
+    <h3>{{ w.name }} - {{ w.price }} ₽</h3>
+    <p>Статус: {{ w.status }}</p>
+    <a href="/wish/{{ w.id }}">Подробнее</a>
+    <a href="/edit/{{ w.id }}">Редактировать</a>
+    <form method="post" action="/delete/{{ w.id }}" style="display:inline">
+        <button>Удалить</button>
+    </form>
+</div>
+{% else %}
+<p>Пока нет желаний</p>
+{% endfor %}
+{% endblock %}
