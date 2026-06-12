@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>{{ wish.name }}</h1>
+<p>{{ wish.price }} ₽</p>
+<p>{{ wish.status }}</p>
+{% if wish.url %}<p><a href="{{ wish.url }}">{{ wish.url }}</a></p>{% endif %}
+<a href="/">Назад</a>
+{% endblock %}
