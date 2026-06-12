@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Список желаний{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav><a href="/">🎁 Wishlist</a> <a href="/add">➕ Добавить</a></nav>
+    <main>{% block content %}{% endblock %}</main>
+</body>
+</html>
